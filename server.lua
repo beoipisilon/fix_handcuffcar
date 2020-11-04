@@ -31,6 +31,16 @@ AddEventHandler("checar:cv",function()
 		end
 	end
 end)
+
+AddEventHandler("vRP:playerLeave",function(user_id,source)
+    local user_id = vRP.getUserId(source)
+    for k,v in pairs (actived) do
+	    if user_id == v then
+		    actived[parseInt(user_id)] = nil
+		end
+	end
+end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- RV
 -----------------------------------------------------------------------------------------------------------------------------------------
