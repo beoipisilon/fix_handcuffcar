@@ -28,6 +28,7 @@ AddEventHandler("checar:cv",function()
 	    if user_id == v then
 		  --  vRP.kick(user_id,"Bugando né safadu?")
 			TriggerClientEvent("checarCarregado",source,false)
+			actived[parseInt(user_id)] = nil
 		end
 	end
 end)
